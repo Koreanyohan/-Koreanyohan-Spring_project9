@@ -17,7 +17,7 @@ import com.example.demo.dto.BoardDTO;
 import com.example.demo.entity.Board;
 import com.example.demo.repository.BoardRepository;
 
-@Service // 서비스 클래스로 지정하기. 컨테이너에 들어감. BoardService 호출시, BoardServiceImpl호출됨. 
+@Service // 서비스 클래스로 지정하기. 컨테이너에 들어감. BoardService 호출시, BoardService상속받은 클래스 중에 BoardServiceImpl호출됨. 
 // 인-페인 BoardService 구현한 객체로서 BoardServiceImpl의 객체가 생성, 컨테이너 저장됨. BoardRepositoryTest 가봐라
 public class BoardServiceImpl implements BoardService {
 

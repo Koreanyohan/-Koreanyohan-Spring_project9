@@ -13,7 +13,7 @@ import com.example.demo.dto.MemberDTO;
 import com.example.demo.entity.Member;
 import com.example.demo.repository.MemberRepository;
 
-@Service
+@Service//서비스 클래스로 지정하기. 컨테이너에 들어감. MemberService 호출시, MemberService상속받은 클래스 중에 MemberServiceImpl호출됨.
 public class MemberServiceImpl implements MemberService {
 
 	@Autowired
