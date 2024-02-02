@@ -21,7 +21,7 @@ public class CommentRepositoryTest {
 	void 게시물등록() {		
 		Member member = Member.builder().id("user1").build();
 		
-		Board board = Board.builder().no(6).build();
+		Board board = Board.builder().no(7).build();
 		
 		Comment comment = Comment.builder()
 				.board(board).writer(member).build();

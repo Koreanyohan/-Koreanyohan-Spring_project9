@@ -20,3 +20,34 @@ public interface CommentRepository extends JpaRepository<Comment, Integer>{ // ë
 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

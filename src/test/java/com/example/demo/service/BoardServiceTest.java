@@ -37,7 +37,7 @@ public class BoardServiceTest {  // cf) BoardService라고 클래스이름 만�
 	  public void 게시물등록() { // 8장 p.27
 	  
 	  BoardDTO dto = BoardDTO.builder()
-			  .title("2번글").content("내용입니다3").writer("user1")
+			  .title("3번글").content("내용입니다3").writer("JJanggu")
 			  .build();
 	  
 	  int no = service.register(dto); // 인페인 BoardService 타입의 service변수의 추상클래스

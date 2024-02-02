@@ -19,9 +19,14 @@ public interface CommentService {
 	// 게시물을 기준으로 댓글 목록을 조회하는 메서드
 	List<CommentDTO> getListByBoardNo(int boardNo);
 	
-	// 댓글 삭제 메서드
-	void remove(int no);
+	/*
+	 * // 댓글 삭제 메서드 void remove(int no);
+	 */	
 	
+	// 댓글 삭제 메서드
+		boolean remove(int no);
+	
+		
 	// dto => Entity 반환
 	default Comment dtoToEntity (CommentDTO dto ) {
 		// CommentDTO에서 작성자 꺼내서 멤버(Member) entity 만들기

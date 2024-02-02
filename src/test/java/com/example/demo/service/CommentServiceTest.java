@@ -19,7 +19,7 @@ public class CommentServiceTest {
 	void 댓글등록() {
 		// Board, Member db에 있는 값 입력해야.
 		CommentDTO dto = CommentDTO.builder()
-						.boardNo(6).writer("Kim") //Board, Member pk 입력은 필수조건.
+						.boardNo(3).writer("JJanggu") //Board, Member pk 입력은 필수조건.
 						.build();				
 		// cf) CommentDTO의 commentNo, regDate, modDate는 시스템에서 자동 입력해줌 
 		

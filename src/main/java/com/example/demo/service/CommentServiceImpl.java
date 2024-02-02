@@ -3,6 +3,7 @@ package com.example.demo.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -52,20 +53,39 @@ public class CommentServiceImpl implements CommentService {
 		}
 		
 		return dtoList;		
-	}	
-	
-	
-// 삭제 - 특정 번호의 댓글 삭제하기	
+	}
+
+	// 삭제 - 특정 번호의 댓글 삭제하기   9장 19페이지 연동해서 수정
 	@Override
-	public void remove(int no) {
-		
-		repository.deleteById(no);
-		
+	public boolean remove(int no) {
+	// 해당 댓글이 있는지 확인
+	Optional<Comment> comment = repository.findById(no);
+	
+	// 없다면 false 반환
+	if(comment.isEmpty()) { // isEmpty()는 Optional함수에 있는 메서드
+		return false;
 	}	
+	
+	// 있다면 댓글 삭제 후 true 반환   //여기에 if(comment.isPresent())넣고 위에거 없애도 된다.
+	repository.deleteById(no);
+	return true;
+ }	
+
+	
+	
+/*
+ * // 삭제 - 특정 번호의 댓글 삭제하기 - 2월 2일에 위에 메서드 추가해서 없앰. service에 있는 remove 메서드는 void타입에서 boolean타입으로 변환
+ * 
+ * @Override public void remove(int no) {
+ * 
+ * repository.deleteById(no);
+ * 
+ *  }
+ */
 }
+	
 
-
-
+	 
 
 
 
